@@ -1,3 +1,4 @@
+using CleanArchitecture.Infra.Data.Context;
 using CleanArchitecture.Mvc.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +33,11 @@ namespace CleanArchitecture.Mvc
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddDbContext<UniversityDBContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("UniversityDbConnection"));
+            });
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

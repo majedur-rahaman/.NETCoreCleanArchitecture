@@ -1,5 +1,8 @@
 ﻿using System;
-namespace CleanArchitecture.Domain
+using System.Collections.Generic;
+using System.Text;
+
+namespace CleanArchitecture.Domain.Models
 {
     public class Course
     {
@@ -9,4 +12,3 @@ namespace CleanArchitecture.Domain
         public string ImageUrl { get; set; }
     }
 }
-
