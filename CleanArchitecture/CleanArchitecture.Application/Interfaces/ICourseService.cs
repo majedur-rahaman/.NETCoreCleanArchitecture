@@ -7,6 +7,6 @@ namespace CleanArchitecture.Application.Interfaces
 {
     public interface ICourseService
     {
-        CourseViewModel GetCourse();
+        CourseViewModel GetCourses();
     }
 }

@@ -14,7 +14,7 @@ namespace CleanArchitecture.Application.Services
         {
             _courseReporsitory = courseRepository;
         }
-        public CourseViewModel GetCourse()
+        public CourseViewModel GetCourses()
         {
             return new CourseViewModel()
             {
