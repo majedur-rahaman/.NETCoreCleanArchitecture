@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace CleanArchitecture.Mvc
@@ -41,6 +42,7 @@ namespace CleanArchitecture.Mvc
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
             RegisterServices(services);
         }
 
