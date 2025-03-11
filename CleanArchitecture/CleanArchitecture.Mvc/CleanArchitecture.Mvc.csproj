@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CleanArchitecture.Infra.Data\CleanArchitecture.Infra.Data.csproj" />
     <ProjectReference Include="..\CleanArchitecture.Infra.IoC\CleanArchitecture.Infra.IoC.csproj" />
   </ItemGroup>
 
