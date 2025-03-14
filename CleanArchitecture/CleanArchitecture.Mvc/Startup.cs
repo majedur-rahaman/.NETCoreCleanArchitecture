@@ -1,5 +1,7 @@
+using CleanArchitecture.Application.AutoMapper;
 using CleanArchitecture.Infra.Data.Context;
 using CleanArchitecture.Infra.IoC;
+using CleanArchitecture.Mvc.Configurations;
 using CleanArchitecture.Mvc.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -43,6 +45,8 @@ namespace CleanArchitecture.Mvc
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
+            
+            services.RegisterAutoMapper();
             RegisterServices(services);
         }
 

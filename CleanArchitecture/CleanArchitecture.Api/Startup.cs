@@ -16,7 +16,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
-
+using CleanArchitecture.Api.Configuration;
 
 namespace CleanArchitecture.Api
 {
@@ -42,7 +42,7 @@ namespace CleanArchitecture.Api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "University Api", Version = "v1" });
             });
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
-
+            services.RegisterAutoMapper();
 
             RegisterServices(services);
         }
